@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<style>
+    body {
+        background-color: #3d4543
+    }
+
+    .box {
+        margin: 2em;
+        text-align: left;
+    }
+
+    .keys {
+        position: relative;
+        height: 40px;
+        top: 2em;
+    }
+
+    .button {
+        width: 4.5em;
+        height: 3.75em;
+        border: none;
+        margin-left: 1em;
+        cursor: pointer;
+    }
+
+    .button.pink {
+        color: black;
+        background-color: #ff4561;
+    }
+
+    .button.black {
+        color: black;
+    }
+
+    .button.orange {
+        color: black;
+        background-color: #ff9933;
+    }
+
+    .input {
+        height: 2em;
+        width: 22em;
+        margin-left: 1em;
+    }
+
+    /*   .box {
+        background-color: #3d4543;
+        height: 320px;
+        width: 255px;
+        text-align: center;
+    }
+
+    .keys {
+        position: relative;
+        height: 40px;
+        border-width: 5px;
+        top: 15px;
+    }
+
+    .button {
+        width: 40px;
+        height: 30px;
+        border: none;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .button.pink {
+        color: black;
+        background-color: #ff4561;
+    }
+
+    .button.black {
+        color: black;
+        background-color: 303030;
+    }*/
+
+</style>
+
+<body>
+
+    <div class="box">
+        <div class="keys">
+            <input type="text" class="input" id="d">
+        </div>
+        <div class="keys">
+            <p>
+                <input type="button" class="button pink" value="%" onclick="percent()">
+                <input type="button" class="button pink" value="X2" onclick="squared()">
+                <input type="button" class="button pink" value="&#8730;" onclick="sqaureRoot()">
+                <input type="button" class="button pink" value="/" onclick='v("*")'>
+            </p>
+            <p>
+                <input type="button" class="button black" value="7" onclick='v("7")'>
+                <input type="button" class="button black" value="8" onclick='v("8")'>
+                <input type="button" class="button black" value="9" onclick='v("9")'>
+                <input type="button" class="button pink" value="*" onclick='v("*")'>
+            </p>
+            <p>
+                <input type="button" class="button black" value="4" onclick='v("4")'>
+                <input type="button" class="button black" value="5" onclick='v("5")'>
+                <input type="button" class="button black" value="6" onclick='v("6")'>
+                <input type="button" class="button pink" value="-" onclick='v("-")'>
+            </p>
+            <p>
+                <input type="button" class="button black" value="1" onclick='v("1")'>
+                <input type="button" class="button black" value="2" onclick='v("2")'>
+                <input type="button" class="button black" value="3" onclick='v("3")'>
+                <input type="button" class="button pink" value="+" onclick='v("+")'>
+            </p>
+            <p>
+                <input type="button" class="button black" value="0" onclick='v("0")'>
+                <input type="button" class="button black" value="C" onclick='c("")'>
+                <input type="button" class="button black" value="." onclick='v(.)'>
+                <input type="button" class="button orange" value="=" onclick='e("")'>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function c(val) {
+            document.getElementById("d").value = val;
+        }
+
+        function v(val) {
+            document.getElementById("d").value += val;
+        }
+
+        function e() {
+            try {
+                c(eval(document.getElementById("d").value))
+            } catch (e) {
+                c('Error')
+            }
+        }
+
+        let num1 = 0;
+        let num2 = 0;
+        let screenTotal = "";
+
+        function percent() {
+            display.innerHTML = num1 * (screenTotal / 100);
+            screenTotal *= num1 / 100;
+        };
+
+        function squareRoot() {
+            let = Math.sqrt()
+        }
+
+    </script>
+</body>
+
+</html>
