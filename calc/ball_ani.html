@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bouncing Ball</title>
+    <style>
+        body {
+            background-color: #ededed;
+        }
+
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+
+        #myCanvas {
+            background: #fff;
+            border: 1px solid #cbcbcb;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <canvas id="myCanvas" width="300" height="300"></canvas>
+
+    </div>
+
+</body>
+<script type="text/javascript">
+    let context;
+    let dx = 4;
+    let dy = 4;
+    let y = 150;
+    let x = 10;
+
+    function draw() {
+        context = myCanvas.getContext('2d');
+        context.clearRect(0, 0, 300, 300);
+        context.beginPath();
+        context.fillStyle = "#0000ff";
+        context.arc(x, y, 20, 0, Math.PI * 2, true);
+        context.closePath();
+        context.fill();
+        if (x < 0 || x > 300)
+            dx = -dx;
+        if (y < 0 || y > 300)
+            dy = -dy;
+        x += dx;
+        y += dy;
+    }
+    setInterval(draw, 10);
+</script>
+</html>

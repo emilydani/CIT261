@@ -89,7 +89,7 @@
                 <input type="button" class="button pink" value="%" onclick="percent()">
                 <input type="button" class="button pink" value="X2" onclick="squared()">
                 <input type="button" class="button pink" value="&#8730;" onclick="sqaureRoot()">
-                <input type="button" class="button pink" value="/" onclick='v("*")'>
+                <input type="button" class="button pink" value="/" onclick='v("/")'>
             </p>
             <p>
                 <input type="button" class="button black" value="7" onclick='v("7")'>
@@ -134,15 +134,6 @@
                 c('Error')
             }
         }
-
-        let num1 = 0;
-        let num2 = 0;
-        let screenTotal = "";
-
-        function percent() {
-            display.innerHTML = num1 * (screenTotal / 100);
-            screenTotal *= num1 / 100;
-        };
 
         function squareRoot() {
             let = Math.sqrt()
