@@ -2,7 +2,7 @@
 <html>
 <style>
     body {
-        background-color: #3d4543
+        background-color: #3d4543;
     }
 
     .box {
@@ -13,7 +13,7 @@
     .keys {
         position: relative;
         height: 40px;
-        top: 2em;
+        top: -3em;
     }
 
     .button {
@@ -31,6 +31,7 @@
 
     .button.black {
         color: black;
+        background-color: white;
     }
 
     .button.orange {
@@ -41,105 +42,190 @@
     .input {
         height: 2em;
         width: 22em;
-        margin-left: 1em;
+        margin-left: 3em;
+        margin-bottom: -3em;
     }
-
-    /*   .box {
-        background-color: #3d4543;
-        height: 320px;
-        width: 255px;
-        text-align: center;
-    }
-
-    .keys {
-        position: relative;
-        height: 40px;
-        border-width: 5px;
-        top: 15px;
-    }
-
-    .button {
-        width: 40px;
-        height: 30px;
-        border: none;
-        margin-left: 15px;
-        cursor: pointer;
-    }
-
-    .button.pink {
-        color: black;
-        background-color: #ff4561;
-    }
-
-    .button.black {
-        color: black;
-        background-color: 303030;
-    }*/
+    
+    .
 
 </style>
 
 <body>
 
-    <div class="box">
-        <div class="keys">
-            <input type="text" class="input" id="d">
+    <div class="calculator">
+        <input type="text" class="input" id="d" maxlength="20">
+        <div class="calc-buttons">
+            <div class="box">
+                <div class="keys">
+                    <!--<input type="text" class="input" id="d">-->
+                </div>
+                <div class="keys">
+                    <p>
+                        <button class="button">√</button>
+                        <button class="button">x ²</button>
+                        <button class="button">%</button>
+                        <button class="button" class="">log</button>
+                    </p>
+                    <p>
+
+                        <button class="button">cos</button>
+                        <button class="button">sin</button>
+                        <button class="button">tan</button>
+                        <input type="button" class="button pink" value="/" onclick='v("/")'>
+                    </p>
+                    <p>
+                        <input type="button" class="button black" value="7" onclick='v("7")'>
+                        <input type="button" class="button black" value="8" onclick='v("8")'>
+                        <input type="button" class="button black" value="9" onclick='v("9")'>
+                        <input type="button" class="button pink" value="*" onclick='v("*")'>
+                    </p>
+                    <p>
+                        <input type="button" class="button black" value="4" onclick='v("4")'>
+                        <input type="button" class="button black" value="5" onclick='v("5")'>
+                        <input type="button" class="button black" value="6" onclick='v("6")'>
+                        <input type="button" class="button pink" value="-" onclick='v("-")'>
+                    </p>
+                    <p>
+                        <input type="button" class="button black" value="1" onclick='v("1")'>
+                        <input type="button" class="button black" value="2" onclick='v("2")'>
+                        <input type="button" class="button black" value="3" onclick='v("3")'>
+                        <input type="button" class="button pink" value="+" onclick='v("+")'>
+                    </p>
+                    <p>
+                        <input type="button" class="button black" value="0" onclick='v("0")'>
+                        <input type="button" class="button black" value="C" onclick='c("")'>
+                        <input type="button" class="button black" value="." onclick='v(".")'>
+                        <input type="button" class="button orange" value="=" onclick='e("")'>
+                    </p>
+                </div>
+            </div>
+
+            <!--<div class="functions-one">
+                <button class="button triggers">C</button>
+                <button class="button basic-stuff">(</button>
+                <button class="button basic-stuff">)</button>
+                <button class="button numbers">7</button>
+                <button class="button numbers">8</button>
+                <button class="button numbers">9</button>
+                <button class="button numbers">4</button>
+                <button class="button numbers">5</button>
+                <button class="button numbers">6</button>
+                <button class="button numbers">1</button>
+                <button class="button numbers">2</button>
+                <button class="button numbers">3</button>
+                <button class="button basic-stuff">±</button>
+                <button class="button numbers">0</button>
+                <button class="button basic-stuff">.</button>
+            </div>
+
+
+
+
+            <div class="functions-two">
+                <button class="button triggers">&#60;=</button>
+                <button class="button complex-stuff">%</button>
+                <button class="button complex-stuff">x !</button>
+                <button class="button complex-stuff">x^</button>
+                <button class="button basic-stuff">*</button>
+                <button class="button basic-stuff">/</button>
+                <button class="button complex-stuff">ln</button>
+                <button class="button complex-stuff">e</button>
+                <button class="button basic-stuff">+</button>
+                <button class="button complex-stuff">x ²</button>
+                <button class="button complex-stuff">log</button>
+                <button class="button complex-stuff">cos</button>
+                <button class="button basic-stuff">-</button>
+                <button class="button complex-stuff">√</button>
+                <button class="button complex-stuff">sin</button>
+                <button class="button complex-stuff">tan</button>
+                <button class="button triggers">=</button>
+                <button class="button complex-stuff">&#x003C0;</button>
+                <button class="button complex-stuff">∘</button>
+                <button class="button complex-stuff">rad</button>
+            </div>-->
+
         </div>
-        <div class="keys">
-            <p>
-                <input type="button" class="button pink" value="%" onclick="percent()">
-                <input type="button" class="button pink" value="X2" onclick="squared()">
-                <input type="button" class="button pink" value="&#8730;" onclick="sqaureRoot()">
-                <input type="button" class="button pink" value="/" onclick='v("/")'>
-            </p>
-            <p>
-                <input type="button" class="button black" value="7" onclick='v("7")'>
-                <input type="button" class="button black" value="8" onclick='v("8")'>
-                <input type="button" class="button black" value="9" onclick='v("9")'>
-                <input type="button" class="button pink" value="*" onclick='v("*")'>
-            </p>
-            <p>
-                <input type="button" class="button black" value="4" onclick='v("4")'>
-                <input type="button" class="button black" value="5" onclick='v("5")'>
-                <input type="button" class="button black" value="6" onclick='v("6")'>
-                <input type="button" class="button pink" value="-" onclick='v("-")'>
-            </p>
-            <p>
-                <input type="button" class="button black" value="1" onclick='v("1")'>
-                <input type="button" class="button black" value="2" onclick='v("2")'>
-                <input type="button" class="button black" value="3" onclick='v("3")'>
-                <input type="button" class="button pink" value="+" onclick='v("+")'>
-            </p>
-            <p>
-                <input type="button" class="button black" value="0" onclick='v("0")'>
-                <input type="button" class="button black" value="C" onclick='c("")'>
-                <input type="button" class="button black" value="." onclick='v(.)'>
-                <input type="button" class="button orange" value="=" onclick='e("")'>
-            </p>
-        </div>
-    </div>
 
-    <script>
-        function c(val) {
-            document.getElementById("d").value = val;
-        }
 
-        function v(val) {
-            document.getElementById("d").value += val;
-        }
-
-        function e() {
-            try {
-                c(eval(document.getElementById("d").value))
-            } catch (e) {
-                c('Error')
+        <script>
+            function c(val) {
+                document.getElementById("d").value = val;
             }
-        }
 
-        function squareRoot() {
-            let = Math.sqrt()
-        }
+            function v(val) {
+                document.getElementById("d").value += val;
+            }
 
-    </script>
+            function e() {
+                try {
+                    c(eval(document.getElementById("d").value))
+                } catch (e) {
+                    c('Error')
+                }
+            }
+
+            var display = document.getElementById("d");
+            var buttons = document.getElementsByClassName("button");
+
+            Array.prototype.forEach.call(buttons, function(button) {
+                button.addEventListener("click", function() {
+                    if (button.textContent != "√" &&
+                        button.textContent != "x ²" &&
+                        button.textContent != "%" &&
+                        button.textContent != "sin" &&
+                        button.textContent != "cos" &&
+                        button.textContent != "tan" &&
+                        button.textContent != "log" ) {
+                        display.value += button.textContent;
+                    } else if (button.textContent === "%") {
+                        percent();
+                    } else if (button.textContent === "x ²") {
+                        square();
+                    } else if (button.textContent === "√") {
+                        squareRoot();
+                    } else if (button.textContent === "sin") {
+                        sin();
+                    } else if (button.textContent === "cos") {
+                        cos();
+                    } else if (button.textContent === "tan") {
+                        tan();
+                    } else if (button.textContent === "log") {
+                        log();
+                    } 
+                });
+            });
+
+
+
+            function square() {
+                display.value = eval(display.value * display.value);
+            }
+
+            function squareRoot() {
+                display.value = Math.sqrt(display.value);
+            }
+
+            function percent() {
+                display.value = display.value / 100;
+            }
+
+            function sin() {
+                display.value = Math.sin(display.value);
+            }
+
+            function cos() {
+                display.value = Math.cos(display.value);
+            }
+
+            function tan() {
+                display.value = Math.tan(display.value);
+            }
+
+            function log() {
+                display.value = Math.log10(display.value);
+            }
+
+        </script>
 </body>
 
 </html>
