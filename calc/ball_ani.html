@@ -5,17 +5,20 @@
     <title>Bouncing Ball</title>
     <style>
         body {
-            background-color: #ededed;
+            background-color: lightgrey;
+            
         }
 
         #container {
-            width: 600px;
-            margin: 0 auto;
+            width: 100%;
+            margin: 2em;
+            display: flex;
+            align-content: center;
         }
 
         #myCanvas {
-            background: #fff;
-            border: 1px solid #cbcbcb;
+            background: white;
+            border: 1px solid lightgrey;
         }
         
     </style>
@@ -24,33 +27,35 @@
 <body>
     <div id="container">
 
-        <canvas id="myCanvas" width="300" height="300"></canvas>
+        <canvas id="myCanvas" width="875em" height="875em"></canvas>
 
     </div>
 
 </body>
 <script type="text/javascript">
     let context;
-    let dx = 4;
-    let dy = 4;
+    let dx = 6;
+    let dy = 2;
     let y = 150;
     let x = 10;
 
     function draw() {
         context = myCanvas.getContext('2d');
-        context.clearRect(0, 0, 300, 300);
+        context.clearRect(0, 0, 875, 875);
         context.beginPath();
-        context.fillStyle = "#0000ff";
+        context.fillStyle = "red";
         context.arc(x, y, 20, 0, Math.PI * 2, true);
         context.closePath();
         context.fill();
-        if (x < 0 || x > 300)
+        if (x < 0 || x > 875)
             dx = -dx;
-        if (y < 0 || y > 300)
+        if (y < 0 || y > 875)
             dy = -dy;
         x += dx;
         y += dy;
     }
     setInterval(draw, 10);
+    
+    
 </script>
 </html>
