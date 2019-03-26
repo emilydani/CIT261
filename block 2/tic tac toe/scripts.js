@@ -4,12 +4,12 @@
     let currentTurn = 1;
     let movesMade = 0;
 
-    document.getElementsByClassName(".square") = let sqr;
+    //document.getElementsByClassName(".square") = let sqr;
 
 
 
-
-    //let sqr = $(".square");
+    //let sqr = document.getElementsByClassName('square');
+    let sqr = $(".square");
     let winnerContainer = $(".winner");
     let reset = $(".reset");
 

@@ -1,6 +1,7 @@
 html, body {
     height: 100%;
     background-color: gainsboro;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .flex-container{
     display: flex;
@@ -27,6 +28,7 @@ html, body {
     height:100px;
     border: 3px solid darkgrey;
     font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .square:hover {
     background-color: floralwhite;
