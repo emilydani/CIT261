@@ -1,13 +1,13 @@
-function every(array, test) {
-    for (let element of array) {
-      if (!test(element)) return false;
-    }
-    return true;
+function every(array, predicate) {
+  for (let element of array) {
+    if (!predicate(element)) return false;
   }
-  
-  function every2(array, test) {
-    return !array.some(element => !test(element));
-  }
+  return true;
+}
+
+function every2(array, predicate) {
+  return !array.some(element => !predicate(element));
+}
   
   console.log(every([1, 3, 5], n => n < 10));
   console.log(every([2, 4, 16], n => n < 10));

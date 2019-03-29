@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .circle {
+                height: 35px;
+                width: 35px;
+                background-color: red;
+                animation-name: moveRight, appearDisappear, bgMove;
+                animation-duration: .2s;
+                animation-iteration-count: linear;
+                animation-timing-function: ease-out;
+            }
+            @keyframes moveRight {
+                from {
+                    transform: translateX(-50%);
+                }
+                to {
+                    transform: translateX(50%);
+                }
+            }
+            @keyframes appearDisappear {
+                0%, 100% {
+                    opacity: 0;
+                }
+                20%, 80% {
+                    opacity: 1;
+                }
+            }
+
+            @keyframes bgMove {
+                100% {
+                    background-position: 120% 0;
+                }
+            }
+        </style>
+    </head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>

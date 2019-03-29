@@ -10,9 +10,8 @@
 <body>
 
     
-  <main>
+  <main onload="load()">
     <h2>Javascript form</h2>
-        <form onsubmit="WriteToFile(this)">
           <div>
            <label>First Name</label>
             <input type="text" id="firstName" name="firstName" placeholder="John" title="A minimum of 5 characters are required" pattern="[A-Za-z -]{5,}" required>
@@ -35,57 +34,41 @@
            </div>
            <div>
               <label>Date</label>
-               <input type="date" name="date">
+               <input type="date" id="date" name="date">
            </div>
            <div>
             <label>Willingness to relocate</label>
             <input type="range" id="rating" name="rating" value="5" min="1" max="10" step="1" oninput="adjustRating(this.value)" onchange="adjustRating(this.value)">
             <span id="ratingvalue">5
             </span>
-       </div>
+          </div>
            <div>
             <label>Prefered Location</label>
-            <input list="list">
-            <datalist name="location" id="list">
-               <option value="Rexburg"></option>
-               <option value="Idaho Falls"></option>
-               <option value="Blackfoot"></option>
-               <option value="South Fremont"></option>  
-               <option value="Boise"></option>
-            </datalist>
-        </div>
+            <input name="location" list="list" id="list">
+          </div>
            
            <div>
                <label>Applying for</label>
                <select name="options" id="options">
-                   <option value="disabled " disabled>Select Option</option>
+                   <option value="disabled" disabled>Select Option</option>
                    <option value="Web designer">Web designer</option>
                    <option value="Web developer">Web developer</option>
                    <option value="Network administrator">Network administrator</option>
                    <option value="Quality Assurance">Quality Assurance</option>
                </select>
            </div>
-           <div>
-            <span>Do you have a bachlors degree in your field?</span>
-            <div>
-               <input type="radio" name="button" value="Yes">
-               <label>Yes</label>
-               <input type="radio" name="button" value="No">
-               <label>No</label>
-            </div>
-           </div>
+           
           <div>
            <label>Additional certifications</label>
             <textarea name="message" id="comment" cols="30" rows="10"></textarea>  
           </div>
-          
-           <div>
-            <input type="submit" value="submit">
-           </div>
-        </form> 
-        <script src="storm.js"></script>
-  
+
+          <div>
+              <input  type="button" value="save" onclick="save()">
+
+          </div>
   </main>
+  <script src="scripts.js"></script>
     
 </body>
 </html>

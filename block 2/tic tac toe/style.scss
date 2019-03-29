@@ -9,11 +9,9 @@ html, body {
 .flex-column{
     flex-direction:column;
 }
-.flex-wrap{
-    flex-wrap:wrap;
-}
+
 .flex-center{
-    justify-content:center;
+   // justify-content:center;
     align-items: center;
 }
 .board-container {
@@ -22,6 +20,7 @@ html, body {
 }
 .board{
     width: 330px;
+    flex-wrap:wrap;
 }
 .square {
     width:100px;
@@ -29,6 +28,7 @@ html, body {
     border: 3px solid darkgrey;
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
 }
 .square:hover {
     background-color: floralwhite;
@@ -37,7 +37,7 @@ html, body {
     display: none;
     padding:2em;
 }
-.reset{
+button{
     padding:1em;
     margin:1em;
 }

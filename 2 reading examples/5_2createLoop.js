@@ -4,4 +4,4 @@ function loop(start, test, update, body) {
     }
   }
   
-  loop(3, n => n > 0, n => n - 1, console.log);//same
+  loop(3, n => n > 0, n => n - 1, console.log);
