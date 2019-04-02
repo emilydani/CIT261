@@ -3,6 +3,10 @@ html, body {
     background-color: gainsboro;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1 {
+    color: green;
+    text-align: center;
+}
 .flex-container{
     display: flex;
 }
@@ -25,7 +29,7 @@ html, body {
 .square {
     width:100px;
     height:100px;
-    border: 3px solid darkgrey;
+    border: 3px solid  rgb(128, 126, 126);
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
@@ -40,4 +44,6 @@ html, body {
 button{
     padding:1em;
     margin:1em;
+    background-color: floralwhite;
+    border-style: none;
 }

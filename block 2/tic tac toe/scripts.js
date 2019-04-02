@@ -1,13 +1,10 @@
 let player1 = 'X';
 let player2 = 'O';
-
 let currentTurn = 1;
 let movesMade = 0;
 
-//document.getElementsByClassName(".square") = let sqr;
-
-let sqr = document.getElementsByClassName('square');
-//let sqr = $('.square');
+//let sqr = document.getElementsByClassName('square');
+let sqr = $('.square');
 let winnerContainer = $('.winner');
 let reset = $('.reset');
 
