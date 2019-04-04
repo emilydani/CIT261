@@ -12,13 +12,14 @@
     
   <main onload="load()">
     <h2>Javascript form</h2>
+    <form action="thanks.html" method="get">
           <div>
            <label>First Name</label>
-            <input type="text" id="firstName" name="firstName" placeholder="John" title="A minimum of 5 characters are required" pattern="[A-Za-z -]{5,}" required>
+            <input type="text" id="firstName" name="firstName" placeholder="John" title="A minimum of 3 characters are required" pattern="[A-Za-z -]{3,}" required>
           </div>
           <div>
             <label>Last Name</label>
-             <input type="text" id="lastName" name="lastName" placeholder="Doe" title="A minimum of 5 characters are required" pattern="[A-Za-z -]{5,}" required>
+             <input type="text" id="lastName" name="lastName" placeholder="Doe" title="A minimum of 3 characters are required" pattern="[A-Za-z -]{3,}" required>
            </div>
            <div>
                <label>Email</label>
@@ -33,7 +34,7 @@
                <input type="number" id="number" name="zipCode" placeholder="83402" required>
            </div>
            <div>
-              <label>Date</label>
+              <label>Avalibility Date</label>
                <input type="date" id="date" name="date">
            </div>
            <div>
@@ -59,14 +60,14 @@
            </div>
            
           <div>
-           <label>Additional certifications</label>
+            <label>Qualifications</label>
             <textarea name="message" id="comment" cols="30" rows="10"></textarea>  
           </div>
 
           <div>
-              <input  type="button" value="save" onclick="save()">
-
+              <input type="submit" value="Save" onclick="save()" class="button">
           </div>
+    </form>
   </main>
   <script src="scripts.js"></script>
     

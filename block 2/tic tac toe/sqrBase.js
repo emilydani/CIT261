@@ -1,12 +1,13 @@
+
 let player1 = 'X';
 let player2 = 'O';
 let currentTurn = 1;
 let movesMade = 0;
 
-//let sqr = document.getElementsByClassName('square');
 let sqr = $('.square');
 let winnerContainer = $('.winner');
 let reset = $('.reset');
+
 
 sqr.on('click', function(e) {
 	movesMade++;
@@ -36,7 +37,6 @@ reset.on('click', (e) => {
 	winnerContainer.css('display', 'none');
 	currentTurn = 1;
 });
-
 function checkForWinner() {
 	if (movesMade > 4) {
 		var sqr = $('.square');
@@ -69,7 +69,6 @@ function checkForWinner() {
 		});
 	}
 }
-
 function declareWinner(winner) {
 	winnerContainer.css('display', 'block');
 	reset.css('display', 'block');
